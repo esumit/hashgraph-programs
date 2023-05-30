@@ -13,7 +13,7 @@ a brief overview of running hashgraph scripts.
 - node -v           # Should be v18.9.1 or above
 - npm -version      # Should be v8.19.1 or above
 
-####Project Setup
+#### Project Setup
 
 - Initialize a new Node.js project with npm init -y.
 - Install the necessary dependencies with npm install --save @hashgraph/sdk dotenv.
