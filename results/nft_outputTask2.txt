@@ -1,0 +1,121 @@
+// Create a script that creates a non-fungible token with the Hedera Token Service belonging to Account1.
+// Set the initial supply to 0 and the maxSupply for 5. Create a custom royalty fee of 10% and a fallback fee of 200 Hbar paid to Account2.
+hashgraph-programs % node createNFT_Task2.js
+Loading credentials for ACCOUNT2
+ACCOUNT_ID: 0.0.13714313
+PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
+PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
+Script Execution Date & Time: 5/30/2023, 6:21:51 PM
+Creating a non-fungible token with Account2...
+New NFT created with ID: 0.0.13714535
+
+
+// Create a second script that mints all 5 NFTs with the Metadata “NFT x” and sends the second NFT to Account3.
+
+sumitarora@Sumits-MacBook-Pro hashgraph-programs % node mintNFT_Task2.js
+Loading credentials for ACCOUNT2
+ACCOUNT_ID: 0.0.13714313
+PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
+PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
+Loading credentials for ACCOUNT3
+ACCOUNT_ID: 0.0.13714314
+PUBLIC_KEY: 302a300506032b6570032100086049ab605c5027d18f82330335f3afab121a3cde536cdd03d45e6c5d21438c
+PRIVATE_KEY: 302e020100300506032b6570042204200e55a7860c97a89a4981bb9dd2a1c9c2f5f675cd7a43ccd3ee8aa82c27e95ed4
+Script Execution Date & Time: 5/30/2023, 6:40:18 PM
+Minting NFTs and transferring one to Account3...
+/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/ReceiptStatusError.cjs:43
+    super(props, `receipt for transaction ${props.transactionId.toString()} contained error status ${props.status.toString()}`);
+    ^
+
+ReceiptStatusError: receipt for transaction 0.0.13714313@1685436012.400087950 contained error status TOKEN_NOT_ASSOCIATED_TO_ACCOUNT
+    at new ReceiptStatusError (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/ReceiptStatusError.cjs:43:5)
+    at TransactionReceiptQuery._mapStatusError (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/transaction/TransactionReceiptQuery.cjs:273:12)
+    at TransactionReceiptQuery.execute (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/Executable.cjs:645:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async TransactionResponse.getReceipt (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/transaction/TransactionResponse.cjs:88:21)
+    at async main (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/mintNFT_Task2.js:66:13) {
+  status: Status { _code: 184 },
+  transactionId: TransactionId {
+    accountId: AccountId {
+      shard: Long { low: 0, high: 0, unsigned: false },
+      realm: Long { low: 0, high: 0, unsigned: false },
+      num: Long { low: 13714313, high: 0, unsigned: false },
+      aliasKey: null,
+      evmAddress: null,
+      _checksum: null
+    },
+    validStart: Timestamp {
+      seconds: Long { low: 1685436012, high: 0, unsigned: false },
+      nanos: Long { low: 400087950, high: 0, unsigned: false }
+    },
+    scheduled: false,
+    nonce: null
+  },
+  transactionReceipt: TransactionReceipt {
+    status: Status { _code: 184 },
+    accountId: null,
+    fileId: null,
+    contractId: null,
+    topicId: null,
+    tokenId: null,
+    scheduleId: null,
+    exchangeRate: ExchangeRate {
+      hbars: 30000,
+      cents: 157200,
+      expirationTime: 2023-05-30T09:00:00.000Z,
+      exchangeRateInCents: 5.24
+    },
+    topicSequenceNumber: Long { low: 0, high: 0, unsigned: false },
+    topicRunningHash: Uint8Array(0) [],
+    totalSupply: Long { low: 0, high: 0, unsigned: false },
+    scheduledTransactionId: null,
+    serials: [],
+    duplicates: [],
+    children: []
+  }
+}
+
+Node.js v18.9.1
+sumitarora@Sumits-MacBook-Pro hashgraph-programs % node mintNFT_Task2.js
+Loading credentials for ACCOUNT2
+ACCOUNT_ID: 0.0.13714313
+PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
+PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
+Loading credentials for ACCOUNT3
+ACCOUNT_ID: 0.0.13714314
+PUBLIC_KEY: 302a300506032b6570032100086049ab605c5027d18f82330335f3afab121a3cde536cdd03d45e6c5d21438c
+PRIVATE_KEY: 302e020100300506032b6570042204200e55a7860c97a89a4981bb9dd2a1c9c2f5f675cd7a43ccd3ee8aa82c27e95ed4
+Script Execution Date & Time: 5/30/2023, 6:41:00 PM
+Minting NFTs and transferring one to Account3...
+/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/PrecheckStatusError.cjs:52
+    super(props, `transaction ${props.transactionId.toString()} failed precheck with status ${props.status.toString()}`);
+    ^
+
+PrecheckStatusError: transaction 0.0.13714313@1685436047.322044086 failed precheck with status INVALID_TOKEN_ID
+    at new PrecheckStatusError (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/PrecheckStatusError.cjs:52:5)
+    at TokenMintTransaction._mapStatusError (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/transaction/Transaction.cjs:1245:12)
+    at TokenMintTransaction.execute (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/Executable.cjs:645:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/mintNFT_Task2.js:51:32) {
+  status: Status { _code: 167 },
+  transactionId: TransactionId {
+    accountId: AccountId {
+      shard: Long { low: 0, high: 0, unsigned: false },
+      realm: Long { low: 0, high: 0, unsigned: false },
+      num: Long { low: 13714313, high: 0, unsigned: false },
+      aliasKey: null,
+      evmAddress: null,
+      _checksum: null
+    },
+    validStart: Timestamp {
+      seconds: Long { low: 1685436047, high: 0, unsigned: false },
+      nanos: Long { low: 322044086, high: 0, unsigned: false }
+    },
+    scheduled: false,
+    nonce: null
+  },
+  contractFunctionResult: null
+}
+
+Node.js v18.9.1
+sumitarora@Sumits-MacBook-Pro hashgraph-programs %

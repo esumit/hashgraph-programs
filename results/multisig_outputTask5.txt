@@ -1,0 +1,28 @@
+// Create a new wallet with an initial balance of 20 Hbar, and 3 keys (Account1, Account2 and Account3) in a key list, with a key threshold of 2.
+// Create transaction to transfer 10 Hbar to Account4 and sign it with Account1 only, show that the transfer fails.
+// Now create a new transaction where Account1 and Account2 sign the transaction and show that the transfer succeeds.
+
+Output
+hashgraph-programs % node multisignTxn_Task5.js
+Loading credentials for ACCOUNT1
+ACCOUNT_ID: 0.0.13714312
+PUBLIC_KEY: 302a300506032b65700321005149aa6845949e5b3022aa5228a1546c0b74ffd7cc72fc032653268d7a80eb3e
+PRIVATE_KEY: 302e020100300506032b657004220420fac3a03129584bd0634620c82c98daa182669d24ecc00155a0cf823d2e91035d
+Loading credentials for ACCOUNT2
+ACCOUNT_ID: 0.0.13714313
+PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
+PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
+Loading credentials for ACCOUNT3
+ACCOUNT_ID: 0.0.13714314
+PUBLIC_KEY: 302a300506032b6570032100086049ab605c5027d18f82330335f3afab121a3cde536cdd03d45e6c5d21438c
+PRIVATE_KEY: 302e020100300506032b6570042204200e55a7860c97a89a4981bb9dd2a1c9c2f5f675cd7a43ccd3ee8aa82c27e95ed4
+Loading credentials for ACCOUNT4
+ACCOUNT_ID: 0.0.13714315
+PUBLIC_KEY: 302a300506032b657003210023ede803f9215cabdc260f813c97395bc525f7f750832c2696d1030b6c285177
+PRIVATE_KEY: 302e020100300506032b657004220420928695a8175a23dbd45ea7c0f09c96df6fb2b9d704c2f6938127b7fe78b40e7c
+Created account with ID: 0.0.13714753
+Creating transaction to transfer 10 Hbar to Account4 and signing it with Account1 only
+The transfer of 10 Hbar to Account4 should have failed as we signed it with Account1 only.
+Creating transaction to transfer 10 Hbar to Account4, signing it with Account1 and Account2
+The transfer of 10 Hbar to Account4 was successful.
+Account4 balance is: 100 ℏ

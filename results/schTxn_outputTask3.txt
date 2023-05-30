@@ -1,0 +1,176 @@
+// Create a script that creates a scheduled transaction of HBar from Account1 to Account2.
+
+hashgraph-programs % node createschTxn_Task3.js
+Loading credentials for ACCOUNT1
+ACCOUNT_ID: 0.0.13714312
+PUBLIC_KEY: 302a300506032b65700321005149aa6845949e5b3022aa5228a1546c0b74ffd7cc72fc032653268d7a80eb3e
+PRIVATE_KEY: 302e020100300506032b657004220420fac3a03129584bd0634620c82c98daa182669d24ecc00155a0cf823d2e91035d
+Loading credentials for ACCOUNT2
+ACCOUNT_ID: 0.0.13714313
+PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
+PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
+Script Execution Date & Time: 5/30/2023, 6:43:22 PM
+Setting up a scheduled transaction to transfer 2 hbar from Account1 to Account2...
+Scheduled transfer of 2 HBAR from 0.0.13714312 to 0.0.13714313 is being created...
+The Schedule ID of the created transaction is: 0.0.13714672
+The ID of the scheduled transaction is: 0.0.4079325@1685436192.619838797?scheduled
+Transaction status:  SUCCESS
+Querying the schedule info...
+Schedule info:
+Scheduled ID:  0.0.13714672
+Memo:  Scheduled TX test32
+Created by:  0.0.4079325
+Paid by:  0.0.4079325
+Expiration time:  2023-05-30T09:13:23.000Z
+The transaction has not been executed yet.
+sumitarora@Sumits-MacBook-Pro hashgraph-programs %
+
+// Make a second script that deletes the transaction.
+
+sumitarora@Sumits-MacBook-Pro hashgraph-programs % node delschTxn_Task3.js
+Loading credentials for ACCOUNT1
+ACCOUNT_ID: 0.0.13714312
+PUBLIC_KEY: 302a300506032b65700321005149aa6845949e5b3022aa5228a1546c0b74ffd7cc72fc032653268d7a80eb3e
+PRIVATE_KEY: 302e020100300506032b657004220420fac3a03129584bd0634620c82c98daa182669d24ecc00155a0cf823d2e91035d
+Loading credentials for ACCOUNT2
+ACCOUNT_ID: 0.0.13714313
+PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
+PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
+Script Execution Date & Time: 5/30/2023, 6:45:42 PM
+Proceeding to remove the scheduled transaction...
+Querying the scheduled transaction with ID: 0.0.13714672...
+The schedule transaction details:
+ScheduleInfo {
+  scheduleId: ScheduleId {
+    shard: Long { low: 0, high: 0, unsigned: false },
+    realm: Long { low: 0, high: 0, unsigned: false },
+    num: Long { low: 13714672, high: 0, unsigned: false },
+    _checksum: null
+  },
+  creatorAccountId: AccountId {
+    shard: Long { low: 0, high: 0, unsigned: false },
+    realm: Long { low: 0, high: 0, unsigned: false },
+    num: Long { low: 4079325, high: 0, unsigned: false },
+    aliasKey: null,
+    evmAddress: null,
+    _checksum: null
+  },
+  payerAccountId: AccountId {
+    shard: Long { low: 0, high: 0, unsigned: false },
+    realm: Long { low: 0, high: 0, unsigned: false },
+    num: Long { low: 4079325, high: 0, unsigned: false },
+    aliasKey: null,
+    evmAddress: null,
+    _checksum: null
+  },
+  schedulableTransactionBody: e {
+    transactionFee: Long { low: 100000000, high: 0, unsigned: true },
+    cryptoTransfer: e { tokenTransfers: [], transfers: [e] }
+  },
+  signers: KeyList { _keys: [], _threshold: null },
+  scheduleMemo: 'Scheduled TX test32',
+  adminKey: PublicKey { _key: PublicKey { _key: [Ed25519PublicKey] } },
+  expirationTime: Timestamp {
+    seconds: Long { low: 1685438003, high: 0, unsigned: false },
+    nanos: Long { low: 0, high: 0, unsigned: false }
+  },
+  executed: null,
+  deleted: null,
+  scheduledTransactionId: TransactionId {
+    accountId: AccountId {
+      shard: [Long],
+      realm: [Long],
+      num: [Long],
+      aliasKey: null,
+      evmAddress: null,
+      _checksum: null
+    },
+    validStart: Timestamp { seconds: [Long], nanos: [Long] },
+    scheduled: true,
+    nonce: null
+  },
+  waitForExpiry: false
+}
+Deleting the scheduled transaction with ID: 0.0.13714672...
+The transaction consensus status is: 22
+The scheduled transaction with ID: 0.0.13714672 has been successfully deleted.
+sumitarora@Sumits-MacBook-Pro hashgraph-programs %
+
+// Print out the schedule information along the way along with the proof that the transfer did not happen.
+// Try to execute the transaction and show that it does not work.
+
+sumitarora@Sumits-MacBook-Pro hashgraph-programs % node infoschTxn_Task3.js
+Loading credentials for ACCOUNT1
+ACCOUNT_ID: 0.0.13714312
+PUBLIC_KEY: 302a300506032b65700321005149aa6845949e5b3022aa5228a1546c0b74ffd7cc72fc032653268d7a80eb3e
+PRIVATE_KEY: 302e020100300506032b657004220420fac3a03129584bd0634620c82c98daa182669d24ecc00155a0cf823d2e91035d
+Loading credentials for ACCOUNT2
+ACCOUNT_ID: 0.0.13714313
+PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
+PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
+Script Execution Date & Time: 5/30/2023, 6:46:19 PM
+Displaying schedule information and validating the transfer did not occur...
+Attempting to execute the transaction, should it not function as expected...
+Checking the scheduled transaction with ID: 0.0.13714672...
+The schedule transaction details:
+ScheduleInfo {
+  scheduleId: ScheduleId {
+    shard: Long { low: 0, high: 0, unsigned: false },
+    realm: Long { low: 0, high: 0, unsigned: false },
+    num: Long { low: 13714672, high: 0, unsigned: false },
+    _checksum: null
+  },
+  creatorAccountId: AccountId {
+    shard: Long { low: 0, high: 0, unsigned: false },
+    realm: Long { low: 0, high: 0, unsigned: false },
+    num: Long { low: 4079325, high: 0, unsigned: false },
+    aliasKey: null,
+    evmAddress: null,
+    _checksum: null
+  },
+  payerAccountId: AccountId {
+    shard: Long { low: 0, high: 0, unsigned: false },
+    realm: Long { low: 0, high: 0, unsigned: false },
+    num: Long { low: 4079325, high: 0, unsigned: false },
+    aliasKey: null,
+    evmAddress: null,
+    _checksum: null
+  },
+  schedulableTransactionBody: e {
+    transactionFee: Long { low: 100000000, high: 0, unsigned: true },
+    cryptoTransfer: e { tokenTransfers: [], transfers: [e] }
+  },
+  signers: KeyList { _keys: [], _threshold: null },
+  scheduleMemo: 'Scheduled TX test32',
+  adminKey: PublicKey { _key: PublicKey { _key: [Ed25519PublicKey] } },
+  expirationTime: Timestamp {
+    seconds: Long { low: 1685438003, high: 0, unsigned: false },
+    nanos: Long { low: 0, high: 0, unsigned: false }
+  },
+  executed: null,
+  deleted: Timestamp {
+    seconds: Long { low: 1685436343, high: 0, unsigned: false },
+    nanos: Long { low: 934845961, high: 0, unsigned: false }
+  },
+  scheduledTransactionId: TransactionId {
+    accountId: AccountId {
+      shard: [Long],
+      realm: [Long],
+      num: [Long],
+      aliasKey: null,
+      evmAddress: null,
+      _checksum: null
+    },
+    validStart: Timestamp { seconds: [Long], nanos: [Long] },
+    scheduled: true,
+    nonce: null
+  },
+  waitForExpiry: false
+}
+The scheduled transaction with ID: 0.0.13714672 has not been executed yet.
+Trying to execute the scheduled transaction with ID: 0.0.13714672...
+Failed to execute the scheduled transaction: max attempts of 10 was reached for request with last error being: RECEIPT_NOT_FOUND
+ hashgraph-programs %
+
+
+

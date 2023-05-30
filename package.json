@@ -1,0 +1,24 @@
+{
+  "name": "hashgraph-programs",
+  "version": "1.0.0",
+  "description": "hashgraph scripts",
+  "main": "...",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esumit/hashgraph-programs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esumit/hashgraph-programs/issues"
+  },
+  "homepage": "https://github.com/esumit/hashgraph-programs#readme",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.25.0",
+    "dotenv": "^16.0.3"
+  }
+}

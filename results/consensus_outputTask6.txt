@@ -1,0 +1,18 @@
+// Create a script to create a consensus transaction on the Hedera Consensus Service using Account1 or Account2. Write protect the topic to make sure that it is not publicly writable by other accounts.
+// Show that the Topic is only writable if you are authorized, by submitting a request that will fail the authorization from Account3.
+// Write the current time in the message of the transaction and submit from Account2.
+
+hashgraph-programs % node consensusService_Task6.js
+Loading credentials for ACCOUNT2
+ACCOUNT_ID: 0.0.13714313
+PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
+PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
+Loading credentials for ACCOUNT3
+ACCOUNT_ID: 0.0.13714314
+PUBLIC_KEY: 302a300506032b6570032100086049ab605c5027d18f82330335f3afab121a3cde536cdd03d45e6c5d21438c
+PRIVATE_KEY: 302e020100300506032b6570042204200e55a7860c97a89a4981bb9dd2a1c9c2f5f675cd7a43ccd3ee8aa82c27e95ed4
+Script Execution Date & Time: 5/30/2023, 7:21:39 PM
+Initiating a consensus transaction on the Hedera Consensus Service...
+Embedding the current time in the transaction message and submitting the transaction...
+Creating a new topic...
+Topic created successfully and write protected! Your topic ID is: 0.0.13714836
