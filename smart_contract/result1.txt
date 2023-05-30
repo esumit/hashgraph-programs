@@ -1,8 +1,0 @@
-sumitarora@Sumits-MacBook-Pro smart_contract % node deploy.js 
-Loading credentials for ACCOUNT2
-ACCOUNT_ID: 0.0.13714313
-PUBLIC_KEY: 302a300506032b6570032100d60b41037a5aebbddb92d86494436d5a86d8da22c2f6586e5894f18c009c06f8
-PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7dc1c8883a4c8c788cc9d2e4e2bd14
-<Buffer 7b 0a 20 20 22 5f 66 6f 72 6d 61 74 22 3a 20 22 68 68 2d 73 6f 6c 2d 61 72 74 69 66 61 63 74 2d 31 22 2c 0a 20 20 22 63 6f 6e 74 72 61 63 74 4e 61 6d ... 3064 more bytes>
-The new contract ID is 0.0.13715121
-sumitarora@Sumits-MacBook-Pro smart_contract %

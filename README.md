@@ -25,8 +25,8 @@ The results of the tasks can be found in the following files:
 
 - results/setup_outputTask1.txt
 - results/nft_outputTask2.txt
-- results/smartcontract_outputTask3.txt
-- results/schTxn_outputTask3.txt
+- smartContract_Task3/result_smartcontract.txt
+- results/schTxn_outputTask4.txt
 - results/multisig_outputTask5.txt
 - results/consensus_outputTask6.txt
 
