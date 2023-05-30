@@ -10,3 +10,63 @@ PRIVATE_KEY: 302e020100300506032b657004220420d69a12553fbaf3f7c41b4bea6799b77c5d7
 <Buffer 7b 0a 20 20 22 5f 66 6f 72 6d 61 74 22 3a 20 22 68 68 2d 73 6f 6c 2d 61 72 74 69 66 61 63 74 2d 31 22 2c 0a 20 20 22 63 6f 6e 74 72 61 63 74 4e 61 6d ... 3064 more bytes>
 The new contract ID is 0.0.13715121
  smart_contract %
+
+
+ sumitarora@Sumits-MacBook-Pro smartContract_Task3 % node call.js
+ Loading credentials for ACCOUNT1
+ ACCOUNT_ID: 0.0.13714312
+ PUBLIC_KEY: 302a300506032b65700321005149aa6845949e5b3022aa5228a1546c0b74ffd7cc72fc032653268d7a80eb3e
+ PRIVATE_KEY: 302e020100300506032b657004220420fac3a03129584bd0634620c82c98daa182669d24ecc00155a0cf823d2e91035d
+ /Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/PrecheckStatusError.cjs:52
+     super(props, `transaction ${props.transactionId.toString()} failed precheck with status ${props.status.toString()}`);
+     ^
+
+ PrecheckStatusError: transaction 0.0.13714312@1685442569.487951411 failed precheck with status LOCAL_CALL_MODIFICATION_EXCEPTION
+     at new PrecheckStatusError (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/PrecheckStatusError.cjs:52:5)
+     at ContractCallQuery._mapStatusError (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/contract/ContractCallQuery.cjs:250:12)
+     at ContractCallQuery.execute (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/node_modules/@hashgraph/sdk/lib/Executable.cjs:645:22)
+     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+     at async main (/Users/sumitarora/Documents/hederaWorks/hashgraph-programs/smartContract_Task3/call.js:29:24) {
+   status: Status { _code: 32 },
+   transactionId: TransactionId {
+     accountId: AccountId {
+       shard: Long { low: 0, high: 0, unsigned: false },
+       realm: Long { low: 0, high: 0, unsigned: false },
+       num: Long { low: 13714312, high: 0, unsigned: false },
+       aliasKey: null,
+       evmAddress: null,
+       _checksum: null
+     },
+     validStart: Timestamp {
+       seconds: Long { low: 1685442569, high: 0, unsigned: false },
+       nanos: Long { low: 487951411, high: 0, unsigned: false }
+     },
+     scheduled: false,
+     nonce: null
+   },
+   contractFunctionResult: ContractFunctionResult {
+     _createResult: false,
+     contractId: ContractId {
+       shard: Long { low: 0, high: 0, unsigned: false },
+       realm: Long { low: 0, high: 0, unsigned: false },
+       num: Long { low: 13715121, high: 0, unsigned: false },
+       evmAddress: null,
+       _checksum: null
+     },
+     bytes: Buffer(0) [Uint8Array] [],
+     errorMessage: 'ILLEGAL_STATE_CHANGE',
+     bloom: Buffer(0) [Uint8Array] [],
+     gasUsed: Long { low: 100000, high: 0, unsigned: true },
+     logs: [],
+     createdContractIds: [],
+     evmAddress: null,
+     stateChanges: [],
+     gas: Long { low: 0, high: 0, unsigned: false },
+     amount: Long { low: 0, high: 0, unsigned: false },
+     functionParameters: Buffer(0) [Uint8Array] [],
+     senderAccountId: null
+   }
+ }
+
+ Node.js v18.9.1
+ sumitarora@Sumits-MacBook-Pro smartContract_Task3
