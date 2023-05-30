@@ -25,7 +25,7 @@ async function main() {
 
     //Create the transaction
     const contractCreate = new ContractCreateTransaction()
-        .setGas(10000000)
+        .setGas(100_000_000)
         .setAdminKey(PrivateKey.fromString(PRIVATE_KEY))
         .setBytecode(bytecode)
         .setInitialBalance(new Hbar(10));

@@ -22,7 +22,7 @@ async function main() {
     // Create the transaction to call function1
     const transaction = new ContractCallQuery()
         .setContractId(SMART_CONTRACT_ID)
-        .setGas(100)
+        .setGas(100000)
         .setFunction("function1", new ContractFunctionParameters().addUint16(4).addUint16(3));
 
     // Execute the transaction and retrieve the result
@@ -33,7 +33,7 @@ async function main() {
     // Create a transaction to call function2 with the result from function1
     const transaction2 = new ContractExecuteTransaction()
         .setContractId(SMART_CONTRACT_ID)
-        .setGas(100)
+        .setGas(100000)
         .setFunction("function2", new ContractFunctionParameters().addUint16(result));
 
     // Execute the transaction and retrieve the result
