@@ -1,6 +1,6 @@
 // Create a script that creates a scheduled transaction of HBar from Account1 to Account2.
 
-hashgraph-programs % node createschTxn_Task3.js
+hashgraph-programs % node createschTxn_Task4.js
 Loading credentials for ACCOUNT1
 ACCOUNT_ID: 0.0.13714312
 PUBLIC_KEY: 302a300506032b65700321005149aa6845949e5b3022aa5228a1546c0b74ffd7cc72fc032653268d7a80eb3e
@@ -27,7 +27,7 @@ sumitarora@Sumits-MacBook-Pro hashgraph-programs %
 
 // Make a second script that deletes the transaction.
 
-sumitarora@Sumits-MacBook-Pro hashgraph-programs % node delschTxn_Task3.js
+sumitarora@Sumits-MacBook-Pro hashgraph-programs % node delschTxn_Task4.js
 Loading credentials for ACCOUNT1
 ACCOUNT_ID: 0.0.13714312
 PUBLIC_KEY: 302a300506032b65700321005149aa6845949e5b3022aa5228a1546c0b74ffd7cc72fc032653268d7a80eb3e
@@ -99,7 +99,7 @@ sumitarora@Sumits-MacBook-Pro hashgraph-programs %
 // Print out the schedule information along the way along with the proof that the transfer did not happen.
 // Try to execute the transaction and show that it does not work.
 
-sumitarora@Sumits-MacBook-Pro hashgraph-programs % node infoschTxn_Task3.js
+sumitarora@Sumits-MacBook-Pro hashgraph-programs % node infoschTxn_Task4.js
 Loading credentials for ACCOUNT1
 ACCOUNT_ID: 0.0.13714312
 PUBLIC_KEY: 302a300506032b65700321005149aa6845949e5b3022aa5228a1546c0b74ffd7cc72fc032653268d7a80eb3e
